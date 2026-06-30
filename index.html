@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiff - Terms of Service & Privacy Policy</title>
+    <style>
+        :root {
+            --bg-color: #1a0033;
+            --text-color: #e6e6ff;
+            --accent-color: #8b5cf6;
+        }
+
+        body.light {
+            --bg-color: #e0f0ff;
+            --text-color: #1f2937;
+            --accent-color: #3b82f6;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text-color);
+            background: linear-gradient(rgba(20,0,40,0.85), rgba(10,0,30,0.9)),
+                        url('https://source.unsplash.com/random/1920x1080/?galaxy,nebula,space') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            line-height: 1.65;
+        }
+
+        body.light {
+            background: linear-gradient(rgba(200,230,255,0.95), rgba(240,248,255,0.95)),
+                        url('https://source.unsplash.com/random/1920x1080/?galaxy,nebula,space') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 30px auto;
+            padding: 25px;
+            background: rgba(15, 5, 35, 0.85);
+            border-radius: 12px;
+        }
+
+        body.light .container {
+            background: rgba(255, 255, 255, 0.92);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.6rem;
+            margin-bottom: 8px;
+            color: var(--accent-color);
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+        }
+
+        .mode-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 14px;
+            background: rgba(0,0,0,0.4);
+            border: none;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        body.light .mode-toggle {
+            background: rgba(255,255,255,0.7);
+            color: #1f2937;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 30px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        body.light .tabs {
+            background: rgba(255,255,255,0.6);
+        }
+
+        .tab {
+            flex: 1;
+            padding: 16px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .tab.active {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            margin-top: 32px;
+        }
+
+        p, li {
+            font-size: 1.05rem;
+        }
+
+        .discord-link {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: #bbb;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 15px; padding: 20px; }
+            h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <button class="mode-toggle" onclick="toggleMode()">Light / Dark</button>
+
+    <div class="container">
+        <h1>Quiff</h1>
+        <p class="subtitle">Terms of Service and Privacy Policy<br>Effective Date: July 1, 2026</p>
+
+        <div class="discord-link">
+            Join our Discord Community: <a href="https://discord.gg/r88YNCEGrT" style="color: #a5b4fc;">https://discord.gg/r88YNCEGrT</a>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" onclick="switchTab(0)">Terms of Service</div>
+            <div class="tab" onclick="switchTab(1)">Privacy Policy</div>
+        </div>
+
+        <!-- Terms of Service -->
+        <div id="tos" class="content">
+            <h2>1. Acceptance</h2>
+            <p>By using Quiff you agree to these terms.</p>
+
+            <h2>2. Bot Description</h2>
+            <p>Quiff is a Discord bot offering economy features, mini games, AI chat, web search, and entertainment commands.</p>
+
+            <h2>3. User Rules</h2>
+            <p>You must not harass other users or exploit bugs for unfair advantage.</p>
+            <p>Spamming commands is generally allowed. However, please respect rules set by individual servers.</p>
+
+            <h2>4. Economy and Games</h2>
+            <p>All currency and items are virtual and have no real world value. Gambling features are for entertainment only.</p>
+
+            <h2>5. AI and Search Features</h2>
+            <p>AI and search responses are generated by third party services. We are not responsible for their content or accuracy.</p>
+
+            <h2>6. Liability</h2>
+            <p>The bot is provided as is. We are not liable for any virtual losses or issues.</p>
+
+            <h2>7. Changes</h2>
+            <p>We may update these terms at any time. Continued use means you accept the changes.</p>
+        </div>
+
+        <!-- Privacy Policy -->
+        <div id="privacy" class="content" style="display: none;">
+            <h2>1. Information We Collect</h2>
+            <p>We collect your Discord User ID, username, economy data, command usage, AI prompts, search queries, and suggestions.</p>
+
+            <h2>2. How We Use Your Data</h2>
+            <p>Your data is used to run the bot and provide features.</p>
+
+            <h2>3. Command History</h2>
+            <p>AI and web search history is stored for safety and moderation reasons.</p>
+
+            <h2>4. Suggestions</h2>
+            <p>Suggestions sent through the bot are anonymous.</p>
+
+            <h2>5. Data Sharing</h2>
+            <p>Your prompts are sent to Groq for processing. We do not sell your data.</p>
+
+            <h2>6. Data Storage and Deletion</h2>
+            <p>Data is stored on the bot server. You can request deletion by contacting the owner.</p>
+
+            <h2>7. Contact</h2>
+            <p>For any questions, join our Discord community: <a href="https://discord.gg/r88YNCEGrT">https://discord.gg/r88YNCEGrT</a></p>
+        </div>
+
+        <footer>
+            &copy; Quiff Discord Bot. All Rights Reserved.
+        </footer>
+    </div>
+
+    <script>
+        function switchTab(n) {
+            document.getElementById('tos').style.display = n === 0 ? 'block' : 'none';
+            document.getElementById('privacy').style.display = n === 1 ? 'block' : 'none';
+            
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach((tab, i) => {
+                tab.classList.toggle('active', i === n);
+            });
+        }
+
+        function toggleMode() {
+            document.body.classList.toggle('light');
+        }
+    </script>
+</body>
+</html>
